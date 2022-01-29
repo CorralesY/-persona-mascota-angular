@@ -1,0 +1,32 @@
+/* .cardss{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+} */
+
+.example-container .mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.row {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    font-size: inherit;
+}
+
+.texto {
+    color: black;
+    font-weight: 500;
+}

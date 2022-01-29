@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<div class="cardss header">
+    <div class="card" style="width: 39rem; opacity: 78%;">
+        <mat-card class="texto">
+            <mat-toolbar>
+                <span class="text">Registro </span>
+            </mat-toolbar>
+
+            <form class="texto" [formGroup]="personForm">
+                <div class="row">
+                    <div class="col-md-5">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nombre</mat-label>
+                            <input type="text" matInput formControlName="nombrePersona" name="nombrePersona" placeholder="Ingrese Nombre">
+                            <mat-error ngxErrors="personForm.nombrePersona">
+                                <p ngxError="required"> Nombre es <small style="font-weight: bold;">Requerido</small></p>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="col-md-5">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Apellido</mat-label>
+                            <input type="text" matInput formControlName="apellidoPersona" name="apellidoPersona" placeholder="Ingrese Apellido">
+                            <mat-error ngxErrors="personForm.apellidoPersona">
+                                <p ngxError="required"> Apellido es <small style="font-weight: bold;">Requerido</small></p>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Correo</mat-label>
+                            <input type="email" matInput formControlName="correo" name="correo" placeholder="Ingrese Correo">
+                            <mat-error ngxErrors="personForm.correo">
+                                <p ngxError="required"> Email es <small style="font-weight: bold;">Requerido</small></p>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-5">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nombre de Mascota</mat-label>
+                            <input type="text" matInput formControlName="nombreMascota" name="nombreMascota" placeholder="Ingrese Nombre de Mascota">
+                            <mat-error ngxErrors="personForm.nombreMascota">
+                                <p ngxError="required"> Mascota es <small style="font-weight: bold;">Requerido</small></p>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Peso de Mascota</mat-label>
+                            <input type="text" matInput formControlName="pesoMascota" name="pesoMascota" placeholder="Ingrese Peso de Mascota">
+                            <mat-error ngxErrors="personForm.pesoMascota">
+                                <p ngxError="required"> Peso es es <small style="font-weight: bold;">Requerido</small></p>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="col-md-5">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Raza de Mascota</mat-label>
+                            <input type="text" matInput formControlName="razaMascota" name="razaMascota" placeholder="Ingrese Raza de Mascota">
+                            <mat-error ngxErrors="personForm.razaMascota">
+                                <p ngxError="required"> Raza es <small style="font-weight: bold;">Requerido</small></p>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <button mat-raised-button class="texto" (click)="registerPerson()">Registrar</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>
